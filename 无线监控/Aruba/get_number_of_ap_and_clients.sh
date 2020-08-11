@@ -2,7 +2,7 @@
 #-----Get Number Of Clients--------# 
 sum=0
 host=office-aruba-bj-t2-11-ac-10
-for i in `snmpwalk -v 2c -c momo 172.16.202.10 1.3.6.1.4.1.14823.2.2.1.5.2.1.7.1.12 | awk -F ":" '{print $4}'`
+for i in `snmpwalk -v 2c -c hello IP_WLC 1.3.6.1.4.1.14823.2.2.1.5.2.1.7.1.12 | awk -F ":" '{print $4}'`
 do
        sum=$((sum+$i))
 done
